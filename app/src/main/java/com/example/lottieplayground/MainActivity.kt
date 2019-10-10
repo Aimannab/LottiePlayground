@@ -1,5 +1,6 @@
 package com.example.lottieplayground
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.hardware.Sensor
@@ -25,6 +26,7 @@ class MainActivity : Activity(), SensorEventListener {
     var running = false
     var sensorManager: SensorManager? = null
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,7 +38,16 @@ class MainActivity : Activity(), SensorEventListener {
 
         //Swipe anim
         swipe_anim = findViewById(R.id.swipe_anim)
-        swipe_anim.repeatCount = LottieDrawable.INFINITE
+
+        swipe_anim!!.setOnTouchListener(object : OnSwipeTouchListener(this@MainActivity) {
+            override fun onSwipeTop() {}
+            override fun onSwipeRight() { swipe_anim.pauseAnimation() }
+            override fun onSwipeLeft() {
+                swipe_anim.playAnimation()
+                swipe_anim.repeatCount = LottieDrawable.INFINITE
+            }
+            override fun onSwipeBottom() {}
+        })
 
         //Thumbs Up Button
         thumb_up = findViewById(R.id.lav_thumbUp)
