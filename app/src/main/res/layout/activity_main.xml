@@ -41,13 +41,13 @@
     <!-- Groovy Walk -->
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/groovy_walk"
-        android:layout_width="411dp"
-        android:layout_height="337dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="311dp"
+        android:layout_height="237dp"
+        android:layout_marginStart="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.337"
+        app:layout_constraintVertical_bias="0.151"
         app:lottie_autoPlay="false"
         app:lottie_fileName="groovy_walk.json"
         app:lottie_speed="1.25" />
@@ -56,14 +56,28 @@
         android:id="@+id/stepsValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:text="0"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/groovy_walk" />
+
+    <!-- Swipe Animation -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/swipe_anim"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.697"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="swipe_anim.json"
+        app:lottie_speed="1.25" />
 
     <!-- Thumbs Up Button -->
     <com.airbnb.lottie.LottieAnimationView
@@ -114,7 +128,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lav_thumbUp"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:lottie_autoPlay="false"
         app:lottie_fileName="toggle_switch.json"
         app:lottie_loop="false"

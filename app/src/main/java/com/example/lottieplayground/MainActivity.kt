@@ -17,12 +17,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : Activity(), SensorEventListener {
 
     internal lateinit var groovy_walk: LottieAnimationView
+    lateinit var swipe_anim: LottieAnimationView
     internal lateinit var thumb_up: LottieAnimationView
     internal lateinit var thumb_down: LottieAnimationView
     internal lateinit var toggle: LottieAnimationView
     internal var flag = 0
     var running = false
-    internal var sensorManager: SensorManager? = null
+    var sensorManager: SensorManager? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,10 @@ class MainActivity : Activity(), SensorEventListener {
         //Groovy Walk
         groovy_walk = findViewById(R.id.groovy_walk)
         groovy_walk.setOnClickListener { changeGroovyState() }
+
+        //Swipe anim
+        swipe_anim = findViewById(R.id.swipe_anim)
+        swipe_anim.repeatCount = LottieDrawable.INFINITE
 
         //Thumbs Up Button
         thumb_up = findViewById(R.id.lav_thumbUp)
