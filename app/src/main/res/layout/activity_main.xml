@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <!-- Custom Action Bar -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="gradient_bg.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Lottie Playground"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lav_actionBar"
+        app:layout_constraintEnd_toEndOf="@+id/lav_actionBar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lav_actionBar" />
+
+    <!-- Groovy Walk -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/groovy_walk"
+        android:layout_width="411dp"
+        android:layout_height="337dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.337"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="groovy_walk.json"
+        app:lottie_speed="1.25" />
+
+    <TextView
+        android:id="@+id/stepsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:text="0"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groovy_walk" />
+
+    <!-- Thumbs Up Button -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_thumbUp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.813"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="thumb_up.json"
+        app:lottie_loop="false"
+        app:lottie_speed="1.25" />
+
+    <!-- Thumbs Down Button (We just rotate the previous one by 180 deg ;) )-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_thumbDown"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="8dp"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.813"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="thumb_up.json"
+        app:lottie_loop="false"
+        app:lottie_speed="1.25" />
+
+    <!-- Toggle Switch -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lav_thumbUp"
+        app:layout_constraintVertical_bias="1.0"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="toggle_switch.json"
+        app:lottie_loop="false"
+        app:lottie_speed="1.75" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
